@@ -4,27 +4,63 @@
 <head>
 
 <meta charset="UTF-8">
-
 <title>Analyse climatique de Cotonou</title>
 
 <style>
 
 body{
-font-family: Arial;
-max-width:900px;
+font-family: Arial, Helvetica, sans-serif;
+max-width: 1000px;
 margin:auto;
 padding:40px;
 line-height:1.6;
+background:#f4f7fb;
+color:#333;
+}
+
+header{
+text-align:center;
+padding:30px;
+background:#1f4e79;
+color:white;
+border-radius:8px;
+margin-bottom:40px;
+}
+
+h2{
+color:#1f4e79;
+border-bottom:2px solid #1f4e79;
+padding-bottom:5px;
+margin-top:40px;
 }
 
 img{
 width:100%;
 margin-top:20px;
 margin-bottom:40px;
+border-radius:6px;
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
 }
 
-h1{
+.section{
+background:white;
+padding:25px;
+border-radius:8px;
+margin-bottom:25px;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+code{
+background:#eee;
+padding:3px 6px;
+border-radius:4px;
+}
+
+footer{
+margin-top:50px;
 text-align:center;
+font-size:14px;
+color:#777;
 }
 
 </style>
@@ -33,54 +69,166 @@ text-align:center;
 
 <body>
 
+<header>
 <h1>Analyse climatique de Cotonou</h1>
+<p>Étude des températures et précipitations (2000-2024)</p>
+</header>
+
+<div class="section">
 
 <h2>Introduction</h2>
 
 <p>
-Ce projet analyse l'évolution du climat à Cotonou entre 2000 et 2024
-à partir de données climatiques fournies par la NASA.
+Ce projet présente une analyse exploratoire du climat de la ville de Cotonou
+au Bénin entre 2000 et 2024. L'objectif est d'étudier les variations de la
+température et des précipitations afin de mieux comprendre les tendances
+climatiques observées sur cette période.
 </p>
+
+</div>
+
+
+<div class="section">
 
 <h2>Source des données</h2>
 
 <p>
-Les données proviennent de la base NASA POWER qui fournit des observations
-climatiques issues de satellites et de modèles atmosphériques.
+Les données climatiques utilisées proviennent de la base de données
+NASA POWER (Prediction Of Worldwide Energy Resources).
+Cette base fournit des observations météorologiques globales issues
+de satellites et de modèles atmosphériques.
 </p>
+
+<p>
+Variables utilisées dans l'analyse :
+</p>
+
+<ul>
+<li><b>T2M</b> : température moyenne à 2 mètres (°C)</li>
+<li><b>PRECTOTCORR</b> : précipitations corrigées (mm)</li>
+</ul>
+
+</div>
+
+
+<div class="section">
 
 <h2>Méthodologie</h2>
 
 <p>
-Les données ont été traitées avec Python en utilisant les bibliothèques
-Pandas et Matplotlib. Les étapes incluent l'import des données,
-la reconstruction des dates et la création de graphiques
-représentant les variations climatiques.
+Les données ont été téléchargées depuis la plateforme NASA POWER
+au format CSV pour la période 2000-2024.
 </p>
+
+<p>
+L'analyse a été réalisée avec le langage de programmation <b>Python</b>
+en utilisant les bibliothèques suivantes :
+</p>
+
+<ul>
+<li>Pandas : manipulation et traitement des données</li>
+<li>Matplotlib : visualisation graphique</li>
+</ul>
+
+<p>
+Les principales étapes de l'analyse sont :
+</p>
+
+<ol>
+<li>Importation des données climatiques</li>
+<li>Nettoyage et préparation des données</li>
+<li>Création d'une variable date</li>
+<li>Calcul de statistiques annuelles</li>
+<li>Création de graphiques pour visualiser les tendances climatiques</li>
+</ol>
+
+</div>
+
+
+<div class="section">
 
 <h2>Température quotidienne</h2>
 
+<p>
+Ce graphique montre l'évolution de la température moyenne quotidienne
+à Cotonou entre 2000 et 2024. On observe une variabilité importante
+liée aux cycles saisonniers.
+</p>
+
 <img src="1_temperature_journaliere.png">
+
+</div>
+
+
+<div class="section">
 
 <h2>Température moyenne annuelle</h2>
 
+<p>
+La température moyenne annuelle permet d'observer les tendances
+climatiques sur le long terme et de détecter d'éventuelles évolutions
+du climat local.
+</p>
+
 <img src="2_temperature_annuelle.png">
+
+</div>
+
+
+<div class="section">
 
 <h2>Précipitations annuelles</h2>
 
+<p>
+Les précipitations annuelles donnent une indication de la variabilité
+du régime pluviométrique à Cotonou. Ces variations peuvent être liées
+à différents phénomènes climatiques régionaux.
+</p>
+
 <img src="3_precipitations_annuelles.png">
+
+</div>
+
+
+<div class="section">
 
 <h2>Cycle saisonnier moyen</h2>
 
+<p>
+Ce graphique représente le cycle saisonnier moyen des températures
+sur l'année. Il permet de visualiser les périodes les plus chaudes
+et les plus fraîches dans la région de Cotonou.
+</p>
+
 <img src="4_cycle_saisonnier.png">
+
+</div>
+
+
+<div class="section">
 
 <h2>Conclusion</h2>
 
 <p>
-L'analyse met en évidence la variabilité saisonnière du climat à Cotonou
-et permet d'observer l'évolution des températures et des précipitations
-sur la période étudiée.
+Cette analyse met en évidence la forte variabilité saisonnière du
+climat à Cotonou. Les températures restent relativement élevées
+tout au long de l'année, tandis que les précipitations présentent
+une distribution saisonnière caractéristique des climats tropicaux
+de l'Afrique de l'Ouest.
 </p>
+
+<p>
+Ce projet constitue une première exploration des données climatiques
+et pourrait être approfondi par des analyses statistiques plus
+avancées ou par l'étude d'autres variables atmosphériques.
+</p>
+
+</div>
+
+
+<footer>
+Projet d'analyse climatique – Données NASA POWER – Analyse réalisée avec Python par Olivier TOUMOUDAGOU
+</footer>
 
 </body>
 
